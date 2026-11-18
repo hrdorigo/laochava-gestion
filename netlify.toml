@@ -1,0 +1,19 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# La app llama a /api/enviarInforme (mismo dominio, sin problemas de CORS)
+[[redirects]]
+  from = "/api/enviarInforme"
+  to = "/.netlify/functions/enviar-informe"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "same-origin"

@@ -1,0 +1,27 @@
+CHECKLIST (el detalle está en README.md)
+
+SUPABASE (supabase.com)
+[ ] 1. Crear proyecto (región São Paulo)
+[ ] 2. SQL Editor > New query > pegar TODO supabase/schema.sql > Run
+[ ] 3. Authentication > Sign In / Providers > Email: desactivar "Allow new users to sign up"
+[ ] 4. Authentication > Users > Add user > crear tu usuario (tildar Auto Confirm User)
+[x] 5. (HECHO) URL y clave publishable ya están cargadas en este paquete
+[x] 6. (HECHO) public/config.js ya está completo, no hay que editarlo
+
+GITHUB (github.com)
+[ ] 7. New repository (privado, nombre: gestion) > "uploading an existing file"
+[ ] 8. Arrastrar el CONTENIDO de esta carpeta (public, netlify, supabase, netlify.toml, package.json)
+[ ] 9. Commit changes
+
+NETLIFY (netlify.com)
+[ ] 10. Add new site > Import an existing project > GitHub > repositorio "gestion" > Deploy
+[ ] 11. Copiar la dirección .netlify.app y pegarla en Supabase > Authentication > URL Configuration > Site URL
+[ ] 12. (Solo para enviar mails, se puede dejar para después)
+        Site configuration > Environment variables: SUPABASE_URL, SUPABASE_ANON_KEY, SMTP_USER,
+        SMTP_PASS, REMITENTE, EMAILS_PERMITIDOS
+[ ] 13. Deploys > Trigger deploy > Deploy site
+
+PROBAR
+[ ] Abrir la dirección de Netlify, ingresar con el usuario del paso 4
+[ ] Ver "Sincronizado" bajo tu mail
+[ ] Administración > Importar copia (.zip) con tu respaldo anterior
